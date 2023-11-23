@@ -1,15 +1,21 @@
+import { config } from "dotenv";
+config();
 import mongoose from "mongoose";
 import express, { Request, Response } from "express";
-import "dotenv/config";
 
+// setup express and mongodb
+
+// express
 const app = express();
-const db = await mongoose.connect(process.env.DATABASE_URL);
-const port = process.env.PORT || 4000;
+app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript Express!!");
+// mongodb
+const db = mongoose.connect(process.env.DATABASE_URL ?? "").then(() => {
+  console.log(`Server running at http://localhost:${process.env.PORT ?? ""}`);
+  app.listen(4000);
 });
 
-app.listen(4000, () => {
-  console.log(`Server running at http://localhost:${port}`);
+// endpoints
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello, TypeScript Express!!");
 });
