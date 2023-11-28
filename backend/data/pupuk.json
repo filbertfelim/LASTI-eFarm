@@ -1,0 +1,17 @@
+[
+ {
+  "id" : 1,
+  "jumlah" : 10,
+  "jenis" : "Pupuk Kandang"
+ },
+ {
+  "id" : 2,
+  "jumlah" : 20,
+  "jenis" : "Pupuk Urea"
+ },
+ {
+  "id" : 3,
+  "jumlah" : 15,
+  "jenis" : "Pupuk NPK"
+ }
+]

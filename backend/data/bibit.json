@@ -1,0 +1,27 @@
+[
+    {
+     "id" : 1,
+     "nama" : "Jagung",
+     "jumlah" : 100
+    },
+    {
+     "id" : 2,
+     "nama" : "Padi",
+     "jumlah" : 100
+    },
+    {
+     "id" : 3,
+     "nama" : "Cabai Merah",
+     "jumlah" : 100
+    },
+    {
+     "id" : 4,
+     "nama" : "Tomat Merah",
+     "jumlah" : 100
+    },
+    {
+     "id" : 5,
+     "nama" : "Selada",
+     "jumlah" : 100
+    }
+]
