@@ -1,16 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ChakraProvider } from '@chakra-ui/react'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Fonts } from "./Fonts";
+const theme = extendTheme({
+  fonts: {
+    heading: `"Nunito",sans-serif`,
+    body: `"Nunito",sans-serif`,
+  },
+});
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <Fonts />
       <App />
     </ChakraProvider>
   </React.StrictMode>

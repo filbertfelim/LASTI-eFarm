@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Navbar";
 
 export default function Lahan() {
   return (
-    <div>Lahan</div>
-  )
+    <>
+      <Navbar></Navbar>
+    </>
+  );
 }
