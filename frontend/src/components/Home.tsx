@@ -58,6 +58,7 @@ export default function Home() {
         <Box height="800px" mt={"20px"}>
           <Flex alignItems={"center"} justifyContent={"center"}>
             <Image
+              width={"500px"}
               objectFit="cover"
               src="/home.png "
               alt="Dan Abramov"
