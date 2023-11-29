@@ -1,39 +1,326 @@
 [
-    {"x": 1, "y": 1, "lastFertilized": "2023-01-01", "isPlanted": true, "motionLevel": "High", "humidityLevel": 30, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 1, "lastFertilized": "2023-02-05", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 45, "plant" : {"isPlanted":false}},
-    {"x": 3, "y": 1, "lastFertilized": "2023-03-10", "isPlanted": true, "motionLevel": "High", "humidityLevel": 40, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 1, "lastFertilized": "2023-04-15", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 55, "plant" : {"isPlanted":false}},
-    {"x": 5, "y": 1, "lastFertilized": "2023-05-20", "isPlanted": true, "motionLevel": "High", "humidityLevel": 50, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 1, "lastFertilized": "2023-06-25", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 25, "plant" :  {"isPlanted":false}},
-    {"x": 1, "y": 2, "lastFertilized": "2023-07-30", "isPlanted": true, "motionLevel": "High", "humidityLevel": 35, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 2, "lastFertilized": "2023-08-04", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 60, "plant" :  {"isPlanted":false}},
-    {"x": 3, "y": 2, "lastFertilized": "2023-09-09", "isPlanted": true, "motionLevel": "High", "humidityLevel": 30, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 2, "lastFertilized": "2023-10-14", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 45, "plant" :  {"isPlanted":false}},
-    {"x": 5, "y": 2, "lastFertilized": "2023-11-19", "isPlanted": true, "motionLevel": "High", "humidityLevel": 40, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 2, "lastFertilized": "2023-01-24", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 55, "plant" :  {"isPlanted":false}},
-    {"x": 1, "y": 3, "lastFertilized": "2023-02-28", "isPlanted": true, "motionLevel": "High", "humidityLevel": 50, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 3, "lastFertilized": "2023-04-04", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 25, "plant" :  {"isPlanted":false}},
-    {"x": 3, "y": 3, "lastFertilized": "2023-05-09", "isPlanted": true, "motionLevel": "High", "humidityLevel": 35, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 3, "lastFertilized": "2023-06-14", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 60, "plant" :  {"isPlanted":false}},
-    {"x": 5, "y": 3, "lastFertilized": "2023-07-19", "isPlanted": true, "motionLevel": "High", "humidityLevel": 30, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 3, "lastFertilized": "2023-08-24", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 45, "plant" :  {"isPlanted":false}},
-    {"x": 1, "y": 4, "lastFertilized": "2023-09-29", "isPlanted": true, "motionLevel": "High", "humidityLevel": 40, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 4, "lastFertilized": "2023-11-03", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 55, "plant" :  {"isPlanted":false}},
-    {"x": 3, "y": 4, "lastFertilized": "2023-01-08", "isPlanted": true, "motionLevel": "High", "humidityLevel": 25, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 4, "lastFertilized": "2023-02-12", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 50, "plant" :  {"isPlanted":false}},
-    {"x": 5, "y": 4, "lastFertilized": "2023-03-19", "isPlanted": true, "motionLevel": "High", "humidityLevel": 35, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 4, "lastFertilized": "2023-04-24", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 60, "plant" :  {"isPlanted":false}},
-    {"x": 1, "y": 5, "lastFertilized": "2023-05-29", "isPlanted": true, "motionLevel": "High", "humidityLevel": 30, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 5, "lastFertilized": "2023-07-03", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 45, "plant" :  {"isPlanted":false}},
-    {"x": 3, "y": 5, "lastFertilized": "2023-08-07", "isPlanted": true, "motionLevel": "High", "humidityLevel": 40, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 5, "lastFertilized": "2023-09-11", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 55, "plant" :  {"isPlanted":false}},
-    {"x": 5, "y": 5, "lastFertilized": "2023-10-16", "isPlanted": true, "motionLevel": "High", "humidityLevel": 50, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 5, "lastFertilized": "2023-11-21", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 25, "plant" :  {"isPlanted":false}},
-    {"x": 1, "y": 6, "lastFertilized": "2023-02-26", "isPlanted": true, "motionLevel": "High", "humidityLevel": 35, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 2, "y": 6, "lastFertilized": "2023-04-02", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 60, "plant" :  {"isPlanted":false}},
-    {"x": 3, "y": 6, "lastFertilized": "2023-05-07", "isPlanted": true, "motionLevel": "High", "humidityLevel": 30, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 4, "y": 6, "lastFertilized": "2023-06-11", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 45, "plant" :  {"isPlanted":false}},
-    {"x": 5, "y": 6, "lastFertilized": "2023-07-16", "isPlanted": true, "motionLevel": "High", "humidityLevel": 40, "plant" : {"id" : 1, "nama" : "Jagung"}},
-    {"x": 6, "y": 6, "lastFertilized": "2023-08-21", "isPlanted": false, "motionLevel": "Low", "humidityLevel": 55, "plant" :  {"isPlanted":false}}
-   
+  {
+    "x": 1,
+    "y": 1,
+    "lastFertilized": "2023-01-01",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 30,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "lastFertilized": "2023-02-05",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 45,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "lastFertilized": "2023-03-10",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 40,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "lastFertilized": "2023-04-15",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 55,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "lastFertilized": "2023-05-20",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 50,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "lastFertilized": "2023-06-25",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 25,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "lastFertilized": "2023-07-30",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 35,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "lastFertilized": "2023-08-04",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 60,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "lastFertilized": "2023-09-09",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 30,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "lastFertilized": "2023-10-14",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 45,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "lastFertilized": "2023-11-19",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 40,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "lastFertilized": "2023-01-24",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 55,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "lastFertilized": "2023-02-28",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 50,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "lastFertilized": "2023-04-04",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 25,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "lastFertilized": "2023-05-09",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 35,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "lastFertilized": "2023-06-14",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 60,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "lastFertilized": "2023-07-19",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 30,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "lastFertilized": "2023-08-24",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 45,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "lastFertilized": "2023-09-29",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 40,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "lastFertilized": "2023-11-03",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 55,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "lastFertilized": "2023-01-08",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 25,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "lastFertilized": "2023-02-12",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 50,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "lastFertilized": "2023-03-19",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 35,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "lastFertilized": "2023-04-24",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 60,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "lastFertilized": "2023-05-29",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 30,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "lastFertilized": "2023-07-03",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 45,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "lastFertilized": "2023-08-07",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 40,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "lastFertilized": "2023-09-11",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 55,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "lastFertilized": "2023-10-16",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 50,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "lastFertilized": "2023-11-21",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 25,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "lastFertilized": "2023-02-26",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 35,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "lastFertilized": "2023-04-02",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 60,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "lastFertilized": "2023-05-07",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 30,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "lastFertilized": "2023-06-11",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 45,
+    "plant": { "isPlanted": false }
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "lastFertilized": "2023-07-16",
+    "isPlanted": true,
+    "motionLevel": "High",
+    "humidityLevel": 40,
+    "plant": { "nama": "Jagung" }
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "lastFertilized": "2023-08-21",
+    "isPlanted": false,
+    "motionLevel": "Low",
+    "humidityLevel": 55,
+    "plant": { "isPlanted": false }
+  }
 ]

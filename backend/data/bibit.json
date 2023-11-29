@@ -1,22 +1,22 @@
 [
-    {
-     "nama" : "Jagung",
-     "jumlah" : 100
-    },
-    {
-     "nama" : "Padi",
-     "jumlah" : 100
-    },
-    {
-     "nama" : "Cabai Merah",
-     "jumlah" : 100
-    },
-    {
-     "nama" : "Tomat Merah",
-     "jumlah" : 100
-    },
-    {
-     "nama" : "Selada",
-     "jumlah" : 100
-    }
+  {
+    "nama": "Jagung",
+    "jumlah": 100
+  },
+  {
+    "nama": "Padi",
+    "jumlah": 100
+  },
+  {
+    "nama": "Cabai Merah",
+    "jumlah": 100
+  },
+  {
+    "nama": "Tomat Merah",
+    "jumlah": 100
+  },
+  {
+    "nama": "Selada",
+    "jumlah": 100
+  }
 ]

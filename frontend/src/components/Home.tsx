@@ -42,7 +42,7 @@ export default function Home() {
             </Box>
             <Box>
               <Button
-                _hover={{backgroundColor : "#415331"}}
+                _hover={{ backgroundColor: "#415331" }}
                 onClick={routeChange}
                 backgroundColor="#6F9E4A"
                 color={"white"}
@@ -55,18 +55,23 @@ export default function Home() {
             </Box>
           </Stack>
         </Box>
-        <Box height="800px" mt={"20px"}>
+        <Box my={"20px"}>
           <Flex alignItems={"center"} justifyContent={"center"}>
             <Image
               width={"500px"}
               objectFit="cover"
               src="/home.png "
-              alt="Dan Abramov"
               marginRight={"15px"}
             />
           </Flex>
         </Box>
       </SimpleGrid>
+      <Image
+        w={"100%"}
+        objectFit="contain"
+        src="/farm.png "
+        marginRight={"15px"}
+      />
     </>
   );
 }

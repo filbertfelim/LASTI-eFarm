@@ -1,14 +1,14 @@
 [
- {
-  "jumlah" : 10,
-  "jenis" : "Pupuk Kandang"
- },
- {
-  "jumlah" : 20,
-  "jenis" : "Pupuk Urea"
- },
- {
-  "jumlah" : 15,
-  "jenis" : "Pupuk NPK"
- }
+  {
+    "jumlah": 10,
+    "jenis": "Pupuk Kandang"
+  },
+  {
+    "jumlah": 20,
+    "jenis": "Pupuk Urea"
+  },
+  {
+    "jumlah": 15,
+    "jenis": "Pupuk NPK"
+  }
 ]
