@@ -31,33 +31,30 @@ app.add_middleware(
 
 async def read_lahan():
     lahan = []
-    for data in lahanCollection.find():
+    for data in lahanCollection.find({},{"_id" : 0}):
         lahan.append(data)
     return lahan
 
 
-# async def read_bibit():
-#     bibit = []
-#     cursor = bibitCollection.find()
-#     async for document in cursor:
-#         bibit.append(Bibit(**document))
-#     return bibit
+async def read_bibit():
+    bibit : Bibit = []
+    for data in bibitCollection.find({},{"_id" : 0}):
+        bibit.append(data)
+    return bibit
 
 
-# async def read_pupuk():
-#     pupuk = []
-#     cursor = pupukCollection.find()
-#     async for document in cursor:
-#         pupuk.append(Pupuk(**document))
-#     return pupuk
+async def read_pupuk():
+    pupuk = []
+    for data in pupukCollection.find({},{"_id" : 0}):
+        pupuk.append(data)
+    return pupuk
 
 
-# async def read_pestisida():
-#     pestisida = []
-#     cursor = pestisidaCollection.find()
-#     async for document in cursor:
-#         pestisida.append(Pestisida(**document))
-#     return pestisida
+async def read_pestisida():
+    pestisida = []
+    for data in pestisidaCollection.find({},{"_id" : 0}):
+        pestisida.append(data)
+    return pestisida
 
 
 # async def create_bibit(bibit):
@@ -66,22 +63,16 @@ async def read_lahan():
 #     return doc
 
 
-# async def read_bibit_by_name(nama):
-#     bibit = await bibitCollection.find_one({"nama": nama})
-#     return bibit
+async def update_lahan(x, y, nama):
+    lahanCollection.update_one(
+        {'$and': [{'x': int(x)}, {'y': int(y)}]}, {"$set": {"plant": {"nama": nama}, "isPlanted" : True }}
+    )
 
-
-# async def update_lahan(x, y, nama):
-#     await lahanCollection.update_one(
-#         {"x": x, "y": y}, {"$set": {"plant": {"nama": nama}}}
-#     )
-#     bibit = await bibitCollection.find_one({"nama": nama})
-
-#     # await bibitCollection.update_one(
-#     #     {"nama": nama}, {"$set": {"jumlah": bibit.jumlah - 1}}
-#     # )
-#     # document = await lahanCollection.find_one({"x": x, "y": y})
-#     # return document
+    bibitCollection.update_one(
+        {"nama": nama}, {"$inc": {"jumlah": -1}}
+    )
+    document = lahanCollection.find_one({'$and': [{'x': int(x)}, {'y': int(y)}]},{"_id" : 0})
+    return document
 
 
 # root
@@ -103,12 +94,12 @@ async def get_lahan():
 
 
 # READ BIBIT
-# @app.get("/bibit")
-# async def get_bibit():
-#     response = await read_bibit()
-#     if response:
-#         return response
-#     raise HTTPException(400, "Something went wrong")
+@app.get("/bibit")
+async def get_bibit():
+    response = await read_bibit()
+    if response:
+        return response
+    raise HTTPException(400, "Something went wrong")
 
 
 # @app.get("/bibit/{nama}")
@@ -119,34 +110,34 @@ async def get_lahan():
 #     raise HTTPException(400, "Something went wrong")
 
 
-# # READ PUPUK
-# @app.get("/pupuk")
-# async def get_pupuk():
-#     response = await read_pupuk()
-#     if response:
-#         return response
-#     raise HTTPException(400, "Something went wrong")
+# READ PUPUK
+@app.get("/pupuk")
+async def get_pupuk():
+    response = await read_pupuk()
+    if response:
+        return response
+    raise HTTPException(400, "Something went wrong")
 
 
-# # READ PESTISIDA
-# @app.get("/pestisida")
-# async def get_pestisida():
-#     response = await read_pestisida()
-#     if response:
-#         return response
-#     raise HTTPException(400, "Something went wrong")
+# READ PESTISIDA
+@app.get("/pestisida")
+async def get_pestisida():
+    response = await read_pestisida()
+    if response:
+        return response
+    raise HTTPException(400, "Something went wrong")
 
 
 # UPDATE DATA
 
 
 # UPDATE LAHAN
-# @app.put("/lahan/{x}/{y}/{bibit}")
-# async def put_lahan(x, y, bibit):
-#     response = await update_lahan(x, y, bibit)
-#     if response:
-#         return response
-#     raise HTTPException(404, f"There is no lahan with the location x : {x} and y : {y}")
+@app.put("/lahan/{x}/{y}/{bibit}")
+async def put_lahan(x, y, bibit):
+    response = await update_lahan(x, y, bibit)
+    if response:
+        return f"Berhasil menanam {bibit}"
+    raise HTTPException(404, f"There is no lahan with the location x : {x} and y : {y}")
 
 
 # CREATE DATA

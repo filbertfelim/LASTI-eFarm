@@ -65,6 +65,20 @@ const LahanGridItem = ({ lahan }: Props) => {
       }
     }
   }
+  
+  const plantBibit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent> ,x : number, y : number, bibit : string) => {
+    event.preventDefault();
+    try {
+      await axios.put(
+        "http://127.0.0.1:8000/lahan/" + x.toString() + "/" + y.toString() + "/" + bibit
+      ).then(response => {
+        onNoPlantClose();
+        window.location.reload();
+      });
+    } catch (error) {
+      console.error("updateBibit", error);
+    }
+  };
 
   useEffect(() => {
     const fetchDataBibit = async () => {
@@ -78,7 +92,7 @@ const LahanGridItem = ({ lahan }: Props) => {
       }
     };
     fetchDataBibit();
-  }, []);
+  }, [onNoPlantClose]);
   return (
     <>
       {lahan.isPlanted ? (
@@ -145,7 +159,7 @@ const LahanGridItem = ({ lahan }: Props) => {
               <Button
                 _hover={{ backgroundColor: "#415331" }}
                 isDisabled={bibit === "" || jumlahBibit === 0}
-                //   onClick={routeChange}
+                onClick={async (e) => {await plantBibit(e,lahan.x,lahan.y,bibit)}}
                 backgroundColor="#6F9E4A"
                 w={"50%"}
                 color={"white"}
