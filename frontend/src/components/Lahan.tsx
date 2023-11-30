@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import { Stack, Box, Heading, Text, Image } from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Stack, Box, Heading, Text } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import axios from "axios";
 import LahanGridItem from "./LahanGridItem";
 

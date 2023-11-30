@@ -5,6 +5,7 @@ import {
   GridItem,
   Image,
   Select,
+  Stack,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -65,18 +66,102 @@ const LahanGridItem = ({ lahan }: Props) => {
       }
     }
   }
-  
-  const plantBibit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent> ,x : number, y : number, bibit : string) => {
+
+  const plantBibit = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    x: number,
+    y: number,
+    bibit: string
+  ) => {
     event.preventDefault();
     try {
-      await axios.put(
-        "http://127.0.0.1:8000/lahan/" + x.toString() + "/" + y.toString() + "/" + bibit
-      ).then(response => {
-        onNoPlantClose();
-        window.location.reload();
-      });
+      await axios
+        .put(
+          "http://127.0.0.1:8000/lahan/" +
+            x.toString() +
+            "/" +
+            y.toString() +
+            "/" +
+            bibit
+        )
+        .then((response) => {
+          onNoPlantClose();
+          window.location.reload();
+        });
     } catch (error) {
-      console.error("updateBibit", error);
+      console.error("plantBibit", error);
+    }
+  };
+
+  const waterBibit = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    x: number,
+    y: number
+  ) => {
+    event.preventDefault();
+    try {
+      await axios
+        .put(
+          "http://127.0.0.1:8000/" +
+            "siram/" +
+            x.toString() +
+            "/" +
+            y.toString()
+        )
+        .then((response) => {
+          onClose();
+          window.location.reload();
+        });
+    } catch (error) {
+      console.error("waterBibit", error);
+    }
+  };
+
+  const fertilizeBibit = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    x: number,
+    y: number
+  ) => {
+    event.preventDefault();
+    try {
+      await axios
+        .put(
+          "http://127.0.0.1:8000/" +
+            "fertilize/" +
+            x.toString() +
+            "/" +
+            y.toString()
+        )
+        .then((response) => {
+          onClose();
+          window.location.reload();
+        });
+    } catch (error) {
+      console.error("fertilizeBibit", error);
+    }
+  };
+
+  const controlPest = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    x: number,
+    y: number
+  ) => {
+    event.preventDefault();
+    try {
+      await axios
+        .put(
+          "http://127.0.0.1:8000/" +
+            "controlpest/" +
+            x.toString() +
+            "/" +
+            y.toString()
+        )
+        .then((response) => {
+          onClose();
+          window.location.reload();
+        });
+    } catch (error) {
+      console.error("controlPest", error);
     }
   };
 
@@ -97,16 +182,96 @@ const LahanGridItem = ({ lahan }: Props) => {
     <>
       {lahan.isPlanted ? (
         <>
-          <GridItem bg="#6F9E4A" onClick={onOpen}>
+          <GridItem
+            bg={
+              lahan.humidityLevel < 20 || lahan.motionLevel === "High"
+                ? "#E00303"
+                : "#6F9E4A"
+            }
+            onClick={onOpen}
+          >
             <Image objectFit="contain" src="/plant.png" p={2} />
           </GridItem>
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
             <ModalOverlay />
-            <ModalContent>
-              <ModalHeader>Modal Title</ModalHeader>
+            <ModalContent mx={"auto"}>
+              <ModalHeader mx={"auto"} mt={"40px"}>
+                <Image objectFit="contain" src="/plant2.png" w={"150px"} />
+              </ModalHeader>
               <ModalCloseButton mt={2} />
-              <ModalBody>tes</ModalBody>
-              <ModalFooter>tes</ModalFooter>
+              <Stack direction={["column"]} spacing="12px">
+                <Text
+                  fontSize={{ base: "sm", md: "md", xl: "lg" }}
+                  fontWeight={700}
+                  letterSpacing={"1px"}
+                  textAlign={"center"}
+                >
+                  Last Fertilized : {lahan.lastFertilized as never as string}
+                </Text>
+                <Text
+                  fontSize={{ base: "sm", md: "md", xl: "lg" }}
+                  fontWeight={700}
+                  letterSpacing={"1px"}
+                  textAlign={"center"}
+                  textColor={lahan.humidityLevel < 20 ? "#E00303" : "black"}
+                >
+                  Humidity Level : {lahan.humidityLevel}
+                </Text>
+                <Text
+                  fontSize={{ base: "sm", md: "md", xl: "lg" }}
+                  fontWeight={700}
+                  letterSpacing={"1px"}
+                  textAlign={"center"}
+                  textColor={lahan.motionLevel === "High" ? "#E00303" : "black"}
+                >
+                  Motion Level : {lahan.motionLevel}
+                </Text>
+                <Button
+                  _hover={{ backgroundColor: "#CC800F", textColor: "white" }}
+                  onClick={async (e) => {
+                    await fertilizeBibit(e, lahan.x, lahan.y);
+                  }}
+                  variant={"outline"}
+                  w={"50%"}
+                  borderColor={"#CC800F"}
+                  borderRadius={"10px"}
+                  mt={"10px"}
+                  mx={"auto"}
+                  py={"15px"}
+                >
+                  Beri Pupuk
+                </Button>
+                <Button
+                  _hover={{ backgroundColor: "#699BF7", textColor: "white" }}
+                  onClick={async (e) => {
+                    await waterBibit(e, lahan.x, lahan.y);
+                  }}
+                  variant={"outline"}
+                  w={"50%"}
+                  borderColor={"#699BF7"}
+                  borderRadius={"10px"}
+                  mx={"auto"}
+                  py={"15px"}
+                >
+                  Siram Tanaman
+                </Button>
+                <Button
+                  _hover={{ backgroundColor: "#6F9E4A", textColor: "white" }}
+                  onClick={async (e) => {
+                    await controlPest(e, lahan.x, lahan.y);
+                  }}
+                  variant={"outline"}
+                  w={"50%"}
+                  borderColor={"#6F9E4A"}
+                  borderRadius={"10px"}
+                  mx={"auto"}
+                  py={"15px"}
+                >
+                  Beri Pestisida
+                </Button>
+              </Stack>
+              <ModalBody></ModalBody>
+              <ModalFooter></ModalFooter>
             </ModalContent>
           </Modal>
         </>
@@ -159,7 +324,9 @@ const LahanGridItem = ({ lahan }: Props) => {
               <Button
                 _hover={{ backgroundColor: "#415331" }}
                 isDisabled={bibit === "" || jumlahBibit === 0}
-                onClick={async (e) => {await plantBibit(e,lahan.x,lahan.y,bibit)}}
+                onClick={async (e) => {
+                  await plantBibit(e, lahan.x, lahan.y, bibit);
+                }}
                 backgroundColor="#6F9E4A"
                 w={"50%"}
                 color={"white"}
