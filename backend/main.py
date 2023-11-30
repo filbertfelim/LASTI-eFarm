@@ -1,10 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv, find_dotenv
+import os
 import datetime
 import pymongo
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(os.environ.get("DATABASE_URL"))
 database = client["eFarm"]
 bibitCollection = database["Bibit"]
 lahanCollection = database["Lahan"]

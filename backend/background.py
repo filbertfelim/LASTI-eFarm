@@ -1,10 +1,11 @@
 import asyncio
 import nest_asyncio
 import pymongo
+import os
 from dotenv import load_dotenv, find_dotenv
 import random
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(os.environ.get("DATABASE_URL"))
 database = client["eFarm"]
 bibitCollection = database["Bibit"]
 lahanCollection = database["Lahan"]
