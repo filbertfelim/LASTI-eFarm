@@ -83,9 +83,10 @@ async def water_crop(x, y):
 
 async def fertilize_crop(x, y):
     lahanCollection.update_one(
-        {"$and": [{"x": int(x)}, {"y": int(y)}]},
+        {"jenis": "Pupuk NPK"},
         {"$set": {"lastFertilized": str(datetime.datetime.now().date())}},
     )
+    pupukCollection.update_one({"jenis": "Pupuk NPK"}, {"$inc": {"jumlah": -1}})
     document = lahanCollection.find_one(
         {"$and": [{"x": int(x)}, {"y": int(y)}]}, {"_id": 0}
     )
@@ -97,6 +98,7 @@ async def control_pest(x, y):
         {"$and": [{"x": int(x)}, {"y": int(y)}]},
         {"$set": {"motionLevel": "Low"}},
     )
+    pestisidaCollection.update_many({}, {"$inc": {"jumlah": -1}})
     document = lahanCollection.find_one(
         {"$and": [{"x": int(x)}, {"y": int(y)}]}, {"_id": 0}
     )
