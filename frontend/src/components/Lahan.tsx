@@ -30,7 +30,7 @@ export default function Lahan() {
     const fetchDataLahan = async () => {
       try {
         const { data: response } = await axios.get(
-          "https://smartefarm.azurewebsites.net/lahan"
+          "https://efarm-lasti.azurewebsites.net/lahan"
         );
         setDataLahan(response);
       } catch (error) {

@@ -77,7 +77,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "https://smartefarm.azurewebsites.net/lahan/" +
+          "https://efarm-lasti.azurewebsites.net/lahan/" +
             x.toString() +
             "/" +
             y.toString() +
@@ -102,7 +102,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "https://smartefarm.azurewebsites.net/" +
+          "https://efarm-lasti.azurewebsites.net/" +
             "siram/" +
             x.toString() +
             "/" +
@@ -126,7 +126,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "https://smartefarm.azurewebsites.net/" +
+          "https://efarm-lasti.azurewebsites.net/" +
             "fertilize/" +
             x.toString() +
             "/" +
@@ -150,7 +150,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "https://smartefarm.azurewebsites.net/" +
+          "https://efarm-lasti.azurewebsites.net/" +
             "controlpest/" +
             x.toString() +
             "/" +
@@ -169,7 +169,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     const fetchDataBibit = async () => {
       try {
         const { data: response } = await axios.get(
-          "https://smartefarm.azurewebsites.net/bibit"
+          "https://efarm-lasti.azurewebsites.net/bibit"
         );
         setDataBibit(response);
       } catch (error) {
