@@ -6,9 +6,7 @@ import os
 import datetime
 import pymongo
 
-client = pymongo.MongoClient(
-    "mongodb+srv://eFarm:XQG8aeKQdHQciaXw@lasti.22mlqm6.mongodb.net/?retryWrites=true&w=majority"
-)
+client = pymongo.MongoClient(os.environ.get("DATABASE_URL"))
 database = client["eFarm"]
 bibitCollection = database["Bibit"]
 lahanCollection = database["Lahan"]

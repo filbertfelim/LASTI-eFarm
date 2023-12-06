@@ -5,7 +5,9 @@ import os
 from dotenv import load_dotenv, find_dotenv
 import random
 
-client = pymongo.MongoClient(os.environ.get("DATABASE_URL"))
+client = pymongo.MongoClient(
+    "mongodb+srv://eFarm:XQG8aeKQdHQciaXw@lasti.22mlqm6.mongodb.net/?retryWrites=true&w=majority"
+)
 database = client["eFarm"]
 bibitCollection = database["Bibit"]
 lahanCollection = database["Lahan"]
