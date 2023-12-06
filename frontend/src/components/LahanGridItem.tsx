@@ -77,7 +77,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "http://127.0.0.1:8000/lahan/" +
+          "https://smartefarm.azurewebsites.net/lahan/" +
             x.toString() +
             "/" +
             y.toString() +
@@ -102,7 +102,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "http://127.0.0.1:8000/" +
+          "https://smartefarm.azurewebsites.net/" +
             "siram/" +
             x.toString() +
             "/" +
@@ -126,7 +126,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "http://127.0.0.1:8000/" +
+          "https://smartefarm.azurewebsites.net/" +
             "fertilize/" +
             x.toString() +
             "/" +
@@ -150,7 +150,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     try {
       await axios
         .put(
-          "http://127.0.0.1:8000/" +
+          "https://smartefarm.azurewebsites.net/" +
             "controlpest/" +
             x.toString() +
             "/" +
@@ -169,7 +169,7 @@ const LahanGridItem = ({ lahan }: Props) => {
     const fetchDataBibit = async () => {
       try {
         const { data: response } = await axios.get(
-          "http://127.0.0.1:8000/bibit"
+          "https://smartefarm.azurewebsites.net/bibit"
         );
         setDataBibit(response);
       } catch (error) {
