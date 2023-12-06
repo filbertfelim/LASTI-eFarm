@@ -15,8 +15,6 @@ pestisidaCollection = database["Pestisida"]
 
 load_dotenv(find_dotenv())
 
-app = FastAPI()
-
 # origins = [
 #     "http://localhost:3000",
 # ]
@@ -104,6 +102,9 @@ async def control_pest(x, y):
         {"$and": [{"x": int(x)}, {"y": int(y)}]}, {"_id": 0}
     )
     return document
+
+
+app = FastAPI()
 
 
 # root
