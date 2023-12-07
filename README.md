@@ -15,7 +15,7 @@ Kelompok 11
 Prototype yang dikembangkan berfokus pada proses bisnis penanaman dan pemeliharaan pertanian yang diimplementasikan dalam bentuk website eFarm. Website eFarm menyediakan komunikasi antara kebutuhan petani sebagai pengguna dengan sensor dan drone. Melalui website eFarm, petani dapat memperoleh informasi kondisi lahan pertaniannya berdasarkan data yang tersimpan maupun data dari hasil pengukuran sensor yang meliputi data kadar air pada lahan untuk mengetahui tingkat kelembaban lahan dan data pergerakan untuk mengetahui keberadaan hama pada lahan pertanian. Selain itu, website eFarm dapat menyampaikan kebutuhan petani untuk melakukan penanaman bibit dan pemeliharaan yang terdiri dari pemupukan, penyiraman, dan pemberian pestisida, kepada drone sebagai pelaksana kegiatan pertanian tersebut.
 
 ## Cara Menjalankan Prototype eFarm
-Silakan membuka website eFarm melalui link berikut ini : [website eFarm](https://lasti-e-farm.vercel.app/)
+Silakan membuka website eFarm melalui link berikut ini : https://lasti-e-farm.vercel.app/
 1. Ketika membuka website eFarm, Anda akan memasuki landing page.
    
    ![Screenshot 2023-12-07 140938](https://github.com/filbertfelim/LASTI-eFarm/assets/110410836/d7ae28f2-3511-4341-8476-4b647bd57d38)
