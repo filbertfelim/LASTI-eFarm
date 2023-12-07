@@ -24,7 +24,7 @@ Silakan membuka website eFarm melalui link berikut ini : [website eFarm](https:/
    
    ![Screenshot 2023-12-07 141150](https://github.com/filbertfelim/LASTI-eFarm/assets/110410836/d6e0cdf2-d713-4244-b442-c81a89ee7f84)
    
-3. Untuk melakukan penanaman bibit, Anda dapat meng-klik petak lahan yang kosong sehingga akan muncul dialog "Tentukan Bibit" untuk memilih bibit yang ingin ditanam. Terdapat 5 jenis bibit, yaitu jagung, padi, cabai merah, tomat merah, dan selada, yang dapat dipilih pada dropdown "Pilih Bibit". Ketersediaan stok bibit yang dipilih akan ditampilkan di bawah dropdown tersebut. Setelah memilih bibit, Anda dapat meng-klik tombol "Mulai Menanam". Petak lahan tersebut yang semula merupakan lahan kosong akan berubah menjadi lahan terisi karena penanaman bibit telah dilakukan oleh drone.
+3. Untuk melakukan penanaman bibit, Anda dapat meng-klik petak lahan yang kosong sehingga akan muncul dialog "Tentukan Bibit" untuk memilih bibit yang ingin ditanam. Terdapat 5 jenis bibit, yaitu jagung, padi, cabai merah, tomat merah, dan selada, yang dapat dipilih pada dropdown "Pilih Bibit". Ketersediaan stok bibit yang dipilih akan ditampilkan di bawah dropdown tersebut. Setelah memilih bibit, Anda dapat meng-klik tombol "Mulai Menanam". Petak lahan tersebut yang semula merupakan lahan kosong akan berubah menjadi lahan terisi karena penanaman bibit telah dilakukan oleh *drone*.
    
    ![Screenshot 2023-12-07 141300](https://github.com/filbertfelim/LASTI-eFarm/assets/110410836/31274986-1187-421a-9a6d-e0e8df16a7b2)
   
