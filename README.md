@@ -2,6 +2,7 @@
 Smart farming eFarm merupakan layanan yang menyediakan manajemen berbasis teknologi modern untuk meningkatkan produktivitas dalam bidang pertanian. Kunci utama dari smart farming eFarm adalah penggunaan sensor untuk mendeteksi kondisi lahan pertanian, drone untuk melaksanakan kegiatan pertanian, dan website sebagai penghubung antara pengguna (petani) dengan sensor maupun drone. Melalui pemanfaatan Internet of Things (IoT) yang mengintegrasikan website dengan sensor dan drone, eFarm menyediakan solusi teknologi yang inovatif dan efektif dalam membantu usaha pertanian untuk melakukan pengelolaan lahan pertanian secara virtual. 
 
 ## Anggota Kelompok
+Kelompok 11
 | NIM | Nama |
 | ----- | ---- |
 | 18221073 | Jessica |
