@@ -37,3 +37,5 @@ Silakan membuka website eFarm melalui link berikut ini : [website eFarm](https:/
    ![Screenshot 2023-12-07 141503](https://github.com/filbertfelim/LASTI-eFarm/assets/110410836/ecaf4356-d4da-43de-80c5-2cdbab464428)
 
 Dengan adanya website eFarm ini, maka proses penanaman dan pemeliharaan yang mencakup pemberian pupuk, penyiraman tanaman, dan pemberian pestisida untuk mengendalikan hama dapat dipantau dan dikelola secara virtual tanpa harus berada di lokasi lahan pertanian. Hal ini akan membantu pekerjaan petani dalam menghasilkan produktivitas pertanian yang maksimal.
+
+## Mari Eksplor Website eFarm!
